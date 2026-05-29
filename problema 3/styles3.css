@@ -1,0 +1,36 @@
+:root {
+    --color-principal: #db9429;
+    --color-fondo: #011f3d;
+    --color-tarjeta: #ffffff;
+    --color-texto: #334155;
+    --color-bio: #9ad6d1;
+    --color-borde: #22680d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--color-fondo); color: var(--color-texto); line-height: 1.7; padding: 25px; }
+header { display: flex; justify-content: space-between; align-items: center; background-color: var(--color-principal); color: white; padding: 20px 40px; border-radius: 12px; }
+.btn-volver { color: #38bdf8; text-decoration: none; font-weight: bold; border: 1px solid #334155; padding: 8px 16px; border-radius: 6px; transition: background 0.2s; }
+.btn-volver:hover { background: #1e293b; }
+.contenedor { max-width: 750px; margin: 30px auto; }
+.info, .formulario-box, .resultados { background: var(--color-tarjeta); padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border: 1px solid var(--color-borde); }
+h3 { color: var(--color-principal); margin-bottom: 12px; font-size: 1.3rem; border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; }
+p { margin-bottom: 12px; text-align: justify; color: #475569; }
+ul { margin-left: 20px; margin-bottom: 15px; color: #475569; }
+li { margin-bottom: 8px; }
+.instruccion { font-size: 0.95rem; font-style: italic; color: #64748b; }
+input[type="number"] { width: 100%; padding: 12px; margin: 12px 0; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+input[type="number"]:focus { border-color: var(--color-bio); outline: none; }
+button { background: var(--color-bio); color: white; border: none; padding: 14px; width: 100%; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.2s; }
+button:hover { background: #0f766e; }
+.placeholder-texto { color: #94a3b8; font-style: italic; text-align: center; padding: 20px 0; }
+.bio-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background-color: #f0fdfa; margin: 10px 0; border-left: 5px solid var(--color-bio); border-radius: 6px; }
+.bio-item span strong { color: #115e59; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    body { background-color: #f0fdf4; }
+}
+@media (max-width: 480px) {
+    body { background-color: #fcf8f2; font-family: 'Cambria', serif; font-size: 15px; }
+    header { flex-direction: column; gap: 12px; text-align: center; padding: 15px; }
+}

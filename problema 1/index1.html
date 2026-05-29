@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1: Seguridad Criptográfica</title>
+    <link rel="stylesheet" href="C:\Users\Usuario\OneDrive\Desktop\cachobebe\problema 1\styles1.css">
+</head>
+<body>
+    <header>
+        <h2>Sistema de Seguridad Numérica (Criptografía)</h2>
+        <a href="../index.html" class="btn-volver">← Volver al Menú</a>
+    </header>
+    <main class="contenedor">
+        
+        <section class="info">
+            <h3>1. Contexto en el Mundo Real</h3>
+            <p>
+                En la seguridad informática actual, la protección de contraseñas y la transferencia de datos confidenciales se basa en la <strong>criptografía asimétrica</strong>. Los números primos son el pilar de este campo debido a que es extremadamente fácil multiplicar dos números primos grandes, pero extremadamente difícil hacer la operación inversa (factorizar el resultado). 
+            </p>
+            <p>
+                Por otra parte, la Sucesión de Fibonacci proporciona un patrón de crecimiento que simula la distribución pseudoaleatoria. Al cruzar ambos conceptos, este sistema identifica aquellos términos de Fibonacci que poseen la propiedad de ser primos (llamados <em>Primos de Fibonacci</em>), los cuales son utilizados como semillas numéricas altamente seguras para generar claves de encriptación que protegen bases de datos y sistemas bancarios contra ataques cibernéticos.
+            </p>
+        </section>
+
+        <section class="info">
+            <h3>2. Análisis del Algoritmo Matemático</h3>
+            <p>
+                Para resolver este problema, la aplicación ejecuta dos sub-procesos lógicos controlados de manera secuencial:
+            </p>
+            <ul>
+                <li><strong>Generación Iterativa de Fibonacci:</strong> La serie se construye sumando los dos valores inmediatamente anteriores ($F_n = F_{n-1} + F_{n-2}$). Para optimizar el rendimiento y el uso de memoria en el navegador, el algoritmo evita el uso de arreglos o vectores pesados. En su lugar, utiliza tres variables simples que van desplazando sus valores en cada vuelta del ciclo.</li>
+                <li><strong>Criba de Verificación de Primos:</strong> Cada número obtenido es enviado a un bucle repetitivo de control. Este bucle realiza divisiones sucesivas usando el operador de residuo modular (<code>%</code>). Contabiliza cuántas veces la división da un resultado exacto (residuo cero). Si al finalizar el ciclo el contador es exactamente igual a 2 (divisible solo entre 1 y sí mismo), el algoritmo valida y clasifica el término como un número primo seguro.</li>
+            </ul>
+        </section>
+
+        <section class="formulario-box">
+            <h3>3. Simulador Criptográfico Interactivo</h3>
+            <p class="instruccion">Defina cuántos términos de la sucesión desea analizar para comprobar su seguridad:</p>
+            <form id="formFibo" onsubmit="return false;">
+                <label for="cantidad">Cantidad de términos a evaluar:</label>
+                <input type="number" id="cantidad" min="1" max="40" placeholder="Ej. 10" required>
+                <button type="button" id="btnCalcular">Generar y Verificar Cadena</button>
+            </form>
+        </section>
+
+        <section class="resultados">
+            <h3>4. Reporte de Análisis en Pantalla</h3>
+            <div id="resultado">
+                <p class="placeholder-texto">Ingrese un número en el simulador para desplegar el análisis del DOM...</p>
+            </div>
+        </section>
+    </main>
+    <script src="C:\Users\Usuario\OneDrive\Desktop\cachobebe\problema 1\script1.js"></script>
+</body>
+</html>

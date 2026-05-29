@@ -1,0 +1,197 @@
+/* Variables de diseño del Menú Principal */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+}
+
+/* Estilos Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #334155;
+}
+
+header h1 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.datos-estudiante {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Cuadrícula de Tarjetas (Grid) */
+.grid-problemas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto flex-grow;
+    flex: 1;
+}
+
+/* Tarjetas */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto Hover Profesional */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Botones de Enlace */
+.btn-enlace {
+    background-color: var(--accent);
+    color: #0f172a;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    display: block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-enlace:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   --- DISEÑO RESPONSIVO EXCLUSIVO DEL MENÚ ---
+   ========================================================================== */
+
+/* FORMATO TABLET (Pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    body {
+        background-color: #1e1e2f; /* El fondo oscuro cambia a un tono azul de medianoche */
+    }
+    
+    .card {
+        background-color: #27293d; /* Las tarjetas cambian de color en modo tablet */
+    }
+}
+
+/* FORMATO CELULAR (Pantallas de 480px o menos) */
+@media (max-width: 480px) {
+    body {
+        background-color: #fafafa; /* ¡Cambio radical! En celular se vuelve un entorno claro */
+        color: #1e293b;
+        font-family: 'Georgia', serif; /* Cambio total de tipografía exigido */
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        color: #0284c7; /* Título azul oscuro para contrastar con el fondo claro */
+    }
+
+    header p, .datos-estudiante {
+        color: #64748b;
+    }
+
+    .card {
+        background-color: #ffffff; /* Tarjetas blancas en el celular */
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+        color: #0f172a;
+    }
+
+    .card p {
+        color: #475569;
+    }
+
+    .btn-enlace {
+        background-color: #0284c7;
+        color: white;
+    }
+    footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 2rem 1rem;
+    border-top: 1px solid #334155;
+    }
+    .enlaces-github {
+    margin-top: 0.8rem;
+    }
+    .enlaces-github a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+    }
+    .enlaces-github a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    }
+    .separador {
+    color: var(--text-muted);
+    }
+}

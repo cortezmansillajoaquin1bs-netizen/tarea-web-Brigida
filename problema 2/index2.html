@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2: Ahorro Progresivo</title>
+    <link rel="stylesheet" href="C:\Users\Usuario\OneDrive\Desktop\cachobebe\problema 2\styles2.css">
+</head>
+<body>
+    <header>
+        <h2>Sistema de Planificación Financiera Inteligente</h2>
+        <a href="../index.html" class="btn-volver">← Volver al Menú</a>
+    </header>
+    <main class="contenedor">
+        
+        <section class="info">
+            <h3>1. Contexto de Aplicación Financiera</h3>
+            <p>
+                Uno de los mayores desafíos en las finanzas personales es la constancia en el ahorro y la adaptación al crecimiento económico. Los planes tradicionales de ahorro fijo suelen volverse obsoletos ante la inflación o pierden el interés del ahorrador al no presentar desafíos dinámicos.
+            </p>
+            <p>
+                Este modelo propone un <strong>Plan de Depósitos Progresivos basados en Fibonacci</strong>. Al ligar la cantidad de dinero mensual a la serie, se logra que el usuario comience con depósitos muy pequeños y accesibles (0 y 1 unidad monetaria), permitiendo la creación de un hábito sólido sin esfuerzo inicial. A medida que avanzan los meses, la exigencia aumenta de forma matemática y exponencial, optimizando la acumulación de capital en los meses donde el hábito ya está completamente consolidado.
+            </p>
+        </section>
+
+        <section class="info">
+            <h3>2. Funcionamiento de la Proyección</h3>
+            <p>
+                El motor financiero calcula el presupuesto mediante un bucle interactivo que ejecuta las siguientes acciones lógicas:
+            </p>
+            <ul>
+                <li><strong>Progresión Natural:</strong> El script evalúa mes a mes el monto correspondiente sumando los dos meses anteriores. Esto permite predecir con exactitud cuánto dinero se requerirá tener disponible en el futuro.</li>
+                <li><strong>Acumulación de Capital:</strong> Además de calcular el monto individual del mes, el programa utiliza una variable acumuladora (un sumador lógico) que va sumando los resultados parciales de manera constante. De esta forma, el sistema muestra el histórico detallado y el total neto ahorrado al final del periodo estipulado.</li>
+            </ul>
+        </section>
+
+        <section class="formulario-box">
+            <h3>3. Simulador de Cronograma de Ahorros</h3>
+            <p class="instruccion">Ingrese el plazo en meses para calcular su proyección de fondos:</p>
+            <form id="formAhorro" onsubmit="return false;">
+                <label for="mesesInput">Cantidad de meses a planificar:</label>
+                <input type="number" id="mesesInput" min="1" max="30" placeholder="Ej. 12" required>
+                <button type="button" id="btnCalcular">Proyectar Tabla de Depósitos</button>
+            </form>
+        </section>
+
+        <section class="resultados">
+            <h3>4. Presupuesto Detallado Generado</h3>
+            <div id="resultadoBox">
+                <p class="placeholder-texto">Defina el número de meses para desplegar el reporte financiero en pantalla.</p>
+            </div>
+        </section>
+    </main>
+    <script src="C:\Users\Usuario\OneDrive\Desktop\cachobebe\problema 2\script2.js"></script>
+</body>
+</html>
